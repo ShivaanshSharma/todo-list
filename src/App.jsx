@@ -1,10 +1,11 @@
-
+import Header from './components/Header';
+import Wrapper from './Wrapper';
 
 function App() {
   return (
-    <>
-      <h1>Todo</h1>
-    </>
+    <Wrapper>
+      <Header />
+    </Wrapper>
   )
 }
 
