@@ -29,6 +29,32 @@ h1 {
     border-right: 2px solid orange;
     border-left: none;
     outline: none;
+    font-family: "Poppins", serif;
+}
+
+#add-new-input {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    outline: none;
+    font-family: "Poppins", serif;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+}
+
+#add-new-button {
+    border: none;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: orange;
+    padding: .5rem 0;
+}
+
+#add-new-button:hover {
+    color: orange;
+    background-color: white;
 }
 
 #new-button {
@@ -64,6 +90,7 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-bottom: 1px solid gray;
 }
 
 .dlt-btn-span {
@@ -75,6 +102,13 @@ h1 {
     color: white;
     background-color: red;
     border: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.dlt-btn:hover {
+    color: red;
+    background-color: white;
 }
 
 .title-size {
