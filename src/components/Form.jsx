@@ -6,6 +6,7 @@ export default function Form(props) {
     const [newTodo, setNewTodo] = useState('');
     const [addDesc, setAddDesc] = useState(false);
     const [newDesc, setNewDesc] = useState('');
+    const [error, setError] = useState(false);
 
     const inputChangeHandler = (e) => {
         setNewTodo(e.target.value);
@@ -20,17 +21,26 @@ export default function Form(props) {
     }
 
     const addNewTodoHandler = () => {
-        setAddDesc(false);
-        const newTodoData = {
-            title: newTodo,
-            Desc: newDesc,
-            id: Math.random()
+        if (!newTodo) {
+            setError(true);
+        } else {
+            setError(false);
+            setAddDesc(false);
+            setNewTodo('');
+            const newTodoData = {
+                title: newTodo,
+                Desc: newDesc,
+                id: Math.random()
+            }
+            props.submitHandler(newTodoData);
         }
-        props.submitHandler(newTodoData);
+        
+
     }
 
     return (
         <>
+        {error ? <p>Enter some value</p> : null}
         <div id="input-container">
             <input value={newTodo} onChange={inputChangeHandler} id="new-input" type="text" placeholder="Enter new todo" />
             <button id="new-button" onClick={addClickHandler}>Add</button>

@@ -91,10 +91,12 @@ h1 {
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid gray;
+    text-overflow: clip;
 }
 
 .dlt-btn-span {
     flex: 0.15;
+    text-align: right;
 }
 
 .dlt-btn {
@@ -113,13 +115,13 @@ h1 {
 
 .title-size {
     font-size: 1.5rem;
-    flex: 0.3;
+    flex: 0.2;
 }
 
 .title-desc {
     font-size: 0.75rem;
     color: gray;
-    flex: 0.55;
+    flex: 0.65;
 }
 
 

@@ -3,7 +3,7 @@
     margin: 2rem auto;
     padding: 1.5rem 0 0 0;
     border-radius: 1rem 1rem 0 0;
-    width: 30%;
+    width: 40%;
     text-align: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: 2px solid orange;
@@ -12,3 +12,9 @@
     gap: 1rem;
     background-color: rgba(255, 255, 255, 0.6)
 }
+
+@media screen and (max-width: 750px) {
+    .wrapper {
+      width: 75%;
+    }
+  }
